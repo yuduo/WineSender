@@ -8,6 +8,9 @@
 
 #import <UIKit/UIKit.h>
 #import "NetRequestOperation.h"
+#import "UserDefault.h"
+#import "MJRefresh.h"
+#import "RMMapper.h"
 @interface CommonViewController : UIViewController
 @property(nonatomic,strong) NetRequestOperation *netWorkOperation;
 @end

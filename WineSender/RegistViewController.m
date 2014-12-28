@@ -7,8 +7,9 @@
 //
 
 #import "RegistViewController.h"
-
+#import "VerifiCodeViewController.h"
 @interface RegistViewController ()
+@property (weak, nonatomic) IBOutlet UITextField *phoneTextField;
 
 @end
 
@@ -33,5 +34,24 @@
     // Pass the selected object to the new view controller.
 }
 */
+- (IBAction)nextStepButtonClicked:(id)sender {
+    
+    NSMutableDictionary *dic = [[NSMutableDictionary alloc]init];
+    [dic setValue:[NSDictionary dictionaryWithObjectsAndKeys:@"2",@"type",
+                   @"h2yAndroidRegister",@"mCode",
+                   @"18662302973",@"account",
+                   nil] forKey:@"POST_DATA"];
+    [dic setValue:@"mobileCode" forKey:@"METHOD_NAME"];
+    [dic setValue:@"" forKey:@"SESSION_ID"];
+    [dic setValue:@"loginCommand" forKey:@"BEAN_NAME"];
+    
+    [self.netWorkOperation PostRequest:dic requestSuccess:^(NSString *returnObj) {
+        NSLog(@"returnObj--%@",returnObj);
+        VerifiCodeViewController *verifiCodeViewController=[self.storyboard instantiateViewControllerWithIdentifier:@"verifiCodeViewController"];
+        [self.navigationController pushViewController:verifiCodeViewController animated:YES];
+    } requestFailure:^(NSString *errorString) {
+        
+    }];
+}
 
 @end

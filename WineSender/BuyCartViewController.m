@@ -7,9 +7,12 @@
 //
 
 #import "BuyCartViewController.h"
-
-@interface BuyCartViewController ()
-
+#import "LoginViewController.h"
+#import "BuyCartTableViewCell.h"
+#import "BuyCardListModel.h"
+@interface BuyCartViewController ()<UITableViewDataSource,UITableViewDelegate>
+@property (weak, nonatomic) IBOutlet UITableView *tableListView;
+@property(nonatomic,strong)NSMutableArray *orderListArray;
 @end
 
 @implementation BuyCartViewController
@@ -17,13 +20,50 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-}
+    _tableListView.delegate = self;
+    _tableListView.dataSource = self;
+    [_tableListView addHeaderWithTarget:self action:@selector(headerRereshing)];
+    [_tableListView addFooterWithTarget:self action:@selector(footerRereshing)];
+    
 
+}
+-(void)viewDidAppear:(BOOL)animated
+{
+    [super viewDidAppear:animated];
+    
+    NSMutableDictionary *dic = [[NSMutableDictionary alloc]init];
+    [dic setValue:[NSDictionary dictionaryWithObjectsAndKeys:UserDefaultEntity.zoneCode,@"zoneCode",
+                   UserDefaultEntity.uid,@"uid",
+                   @"2",@"type",
+                   [NSNumber numberWithInt:10],@"pagesize",
+                   [NSNumber numberWithInt:1],@"page",
+                   nil] forKey:@"POST_DATA"];
+    [dic setValue:@"getList" forKey:@"METHOD_NAME"];
+    [dic setValue:UserDefaultEntity.session_id forKey:@"SESSION_ID"];
+    [dic setValue:@"cartCommand" forKey:@"BEAN_NAME"];
+    
+    [self.netWorkOperation PostRequest:dic requestSuccess:^(NSString *returnObj) {
+        NSLog(@"returnObj--%@",returnObj);
+        NSDictionary *dic = (NSDictionary*)returnObj;
+        NSArray *returnArray=[NSJSONSerialization JSONObjectWithData:[[dic valueForKey:@"JSON_DATA"] dataUsingEncoding:NSUTF8StringEncoding] options:NSJSONReadingMutableLeaves error:nil];
+        NSArray *buildList=[RMMapper arrayOfClass:[BuyCardListModel class] fromArrayOfDictionary:returnArray];
+        _orderListArray = [[NSMutableArray alloc]initWithArray:buildList];
+        [_tableListView reloadData];
+    } requestFailure:^(NSString *errorString) {
+        
+    }];
+}
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
+-(void)headerRereshing{
+    
+}
 
+-(void)footerRereshing{
+    
+}
 /*
 #pragma mark - Navigation
 
@@ -40,11 +80,47 @@
         //login
     }else
     {
-        
+        LoginViewController *loginViewController=[self.storyboard instantiateViewControllerWithIdentifier:@"LoginViewController"];
+        [self.navigationController pushViewController:loginViewController animated:YES];
     }
 }
 -(BOOL)checkWhetherLogin
 {
+    if (UserDefaultEntity.session_id.length) {
+        return YES;
+    }
     return NO;
+}
+
+#pragma mark - tableView
+-(NSInteger)numberOfSectionsInTableView:(UITableView *)tableView{
+    return 1;
+}
+
+-(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
+    
+    return [_orderListArray count];
+}
+
+
+-(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
+    
+    BuyCardListModel *model = [_orderListArray objectAtIndex:indexPath.row];
+    NSString *identifier = @"BuyCartTableViewCell";
+    BuyCartTableViewCell* cell   = (BuyCartTableViewCell*)[tableView dequeueReusableCellWithIdentifier:identifier];
+    if (cell == nil) {
+        NSArray* nibs = [[NSBundle mainBundle] loadNibNamed:@"BuyCartTableViewCell" owner:self options:nil];
+        for (id oneObject in nibs) {
+            if ([oneObject isKindOfClass:[BuyCartTableViewCell class]]) {
+                cell = (BuyCartTableViewCell *)oneObject;
+            }
+        }
+    }
+    [cell updateController:model];
+    return cell;
+}
+-(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    
 }
 @end

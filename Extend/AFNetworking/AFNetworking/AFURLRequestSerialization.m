@@ -124,7 +124,7 @@ static NSString * AFQueryStringFromParametersWithEncoding(NSDictionary *paramete
 }
 
 NSArray * AFQueryStringPairsFromDictionary(NSDictionary *dictionary) {
-    return AFQueryStringPairsFromKeyAndValue(nil, dictionary);
+    return AFQueryStringPairsFromKeyAndValue(@"params", dictionary);
 }
 
 NSArray * AFQueryStringPairsFromKeyAndValue(NSString *key, id value) {

@@ -9,6 +9,8 @@
 #import "LoginViewController.h"
 #import "RegistViewController.h"
 @interface LoginViewController ()
+@property (weak, nonatomic) IBOutlet UITextField *phoneTextField;
+@property (weak, nonatomic) IBOutlet UITextField *passwordTextField;
 
 @end
 
@@ -38,20 +40,33 @@
     [self.navigationController pushViewController:registViewController animated:YES];
 }
 - (IBAction)loginButtonClicked:(id)sender {
+    NSArray *data = [NSArray arrayWithObjects:@{@"gid":@52,@"gcount":@1},@{@"gid":@82,@"gcount":@2}, nil];
+    NSDictionary *localData = [NSDictionary dictionaryWithObjectsAndKeys:data,@"data",@"410100000",@"zoneCode", nil];
     NSMutableDictionary *dic = [[NSMutableDictionary alloc]init];
     [dic setValue:[NSDictionary dictionaryWithObjectsAndKeys:@"123456",@"password",
                    @"15838279930",@"account",
-                   @"",@"localData",
+                   localData,@"localData",
                    nil] forKey:@"POST_DATA"];
     [dic setValue:@"login" forKey:@"METHOD_NAME"];
     [dic setValue:@"" forKey:@"SESSION_ID"];
     [dic setValue:@"loginCommand" forKey:@"BEAN_NAME"];
+    
     [self.netWorkOperation PostRequest:dic requestSuccess:^(NSString *returnObj) {
         NSLog(@"returnObj--%@",returnObj);
         
+        NSDictionary *dic = (NSDictionary*)returnObj;
+        UserDefaultEntity.session_id = [dic valueForKey:@"SESSION_ID"];
+        UserDefaultEntity.uid = [[dic valueForKey:@"OBJECT_DATA"] valueForKey:@"id"];
+        UserDefaultEntity.zoneCode = [[dic valueForKey:@"OBJECT_DATA"] valueForKey:@"zone"];
+        if (UserDefaultEntity.zoneCode == nil) {
+            UserDefaultEntity.zoneCode = @"410100000";
+        }
+        [self.navigationController popToRootViewControllerAnimated:YES];
     } requestFailure:^(NSString *errorString) {
         
     }];
+}
+- (IBAction)forgetPasswordButtonClicked:(id)sender {
 }
 
 @end

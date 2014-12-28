@@ -8,7 +8,10 @@
 
 #import "PeopleViewController.h"
 #import "LoginViewController.h"
-@interface PeopleViewController ()
+#import "ListTableViewCell.h"
+#import "OrderListViewController.h"
+@interface PeopleViewController ()<UITableViewDataSource,UITableViewDelegate>
+@property (weak, nonatomic) IBOutlet UITableView *tableListView;
 
 @end
 
@@ -17,6 +20,10 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    _tableListView.delegate = self;
+    _tableListView.dataSource = self;
+//    UserDefaultEntity.session_id =@"0880bc2e-996f-4833-bd31-6793afc90c60";
+//    UserDefaultEntity.uid = @"123";
 }
 
 - (void)didReceiveMemoryWarning {
@@ -46,6 +53,97 @@
 }
 -(BOOL)checkWhetherLogin
 {
+    if (UserDefaultEntity.session_id.length) {
+        return YES;
+    }
     return NO;
+}
+
+
+#pragma mark - tableView
+-(NSInteger)numberOfSectionsInTableView:(UITableView *)tableView{
+    return 3;
+}
+
+-(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
+    switch (section) {
+        case 0:
+            return 1;
+            break;
+        case 1:
+            return 2;
+            break;
+        case 2:
+            return 1;
+            break;
+        default:
+            break;
+    }
+    return 6;
+}
+
+
+-(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
+    NSString *identifier = @"ListTableViewCell";
+    ListTableViewCell* cell   = (ListTableViewCell*)[tableView dequeueReusableCellWithIdentifier:identifier];
+    if (cell == nil) {
+        NSArray* nibs = [[NSBundle mainBundle] loadNibNamed:@"ListTableViewCell" owner:self options:nil];
+        for (id oneObject in nibs) {
+            if ([oneObject isKindOfClass:[ListTableViewCell class]]) {
+                cell = (ListTableViewCell *)oneObject;
+            }
+        }
+    }
+    switch (indexPath.section) {
+        case 0:
+            cell.iconImageView.image = [UIImage imageNamed:@"android_personel_quickly_order.png"];
+            cell.titleLabel.text = @"订单查询";
+            break;
+        case 1:
+        {
+            switch (indexPath.row) {
+                case 0:
+                    cell.iconImageView.image = [UIImage imageNamed:@"android_personel_quickly_order.png"];
+                    cell.titleLabel.text = @"我的J友";
+                    break;
+                case 1:
+                    cell.iconImageView.image = [UIImage imageNamed:@"android_personel_quickly_order.png"];
+                    cell.titleLabel.text = @"签到领豆";
+                    break;
+            }
+        }
+            break;
+        case 2:
+            cell.iconImageView.image = [UIImage imageNamed:@"android_personel_quickly_order.png"];
+            cell.titleLabel.text = @"地址管理";
+            break;
+    }
+    return cell;
+}
+-(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    switch (indexPath.section) {
+        case 0:
+        {
+            OrderListViewController *verifiCodeViewController=[self.storyboard instantiateViewControllerWithIdentifier:@"OrderListViewController"];
+            [self.navigationController pushViewController:verifiCodeViewController animated:YES];
+        }
+            break;
+        case 1:
+        {
+            switch (indexPath.row) {
+                case 0:
+                    
+                    break;
+                case 1:
+                    
+                    break;
+            }
+        }
+            break;
+        case 2:
+            
+            break;
+    }
 }
 @end
