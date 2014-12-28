@@ -43,21 +43,27 @@
     UITableViewCell *cell = [[UITableViewCell alloc]init];
     switch (indexPath.row) {
         case 0:
+            cell.imageView.image = [UIImage imageNamed:@"baijiu.png"];
             cell.textLabel.text = @"白酒";
             break;
         case 1:
+            cell.imageView.image = [UIImage imageNamed:@"hongjiu.png"];
             cell.textLabel.text = @"红酒";
             break;
         case 2:
+            cell.imageView.image = [UIImage imageNamed:@"pijiu.png"];
             cell.textLabel.text = @"啤酒";
             break;
         case 3:
+            cell.imageView.image = [UIImage imageNamed:@"yangjiu.png"];
             cell.textLabel.text = @"洋酒";
             break;
         case 4:
+            cell.imageView.image = [UIImage imageNamed:@"yinliao.png"];
             cell.textLabel.text = @"其它";
             break;
         case 5:
+            cell.imageView.image = [UIImage imageNamed:@""];
             cell.textLabel.text = @"最新资讯";
             break;
         default:
@@ -97,5 +103,8 @@
     verifiCodeViewController.typeId = typeid;
     [self.navigationController pushViewController:verifiCodeViewController animated:YES];
 }
-
+-(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    return 80;
+}
 @end

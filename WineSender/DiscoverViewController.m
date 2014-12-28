@@ -52,6 +52,7 @@
 -(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
     
     UITableViewCell *cell = [[UITableViewCell alloc]init];
+    cell.imageView.image = [UIImage imageNamed:@"mylove.png"];
     cell.textLabel.text = @"我的最爱";
     return cell;
 }
@@ -78,8 +79,7 @@
 
 -(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
     
-    UITableViewCell *cell = [self tableView:tableView cellForRowAtIndexPath:indexPath];
-    return cell.frame.size.height;
+    return 70;
 }
 
 @end

@@ -7,7 +7,7 @@
 //
 
 #import "MyLoveViewController.h"
-
+#import "ProductDetailViewController.h"
 @interface MyLoveViewController ()
 
 @end
@@ -105,7 +105,11 @@
 }
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    
+    ProductListModel *model = [_orderListArray objectAtIndex:indexPath.row];
+    ProductDetailViewController *loginViewController=[self.storyboard instantiateViewControllerWithIdentifier:@"ProductDetailViewController"];
+    loginViewController.gid = model.id;
+    loginViewController.vid = model.version;
+    [self.navigationController pushViewController:loginViewController animated:YES];
 }
 -(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
     
