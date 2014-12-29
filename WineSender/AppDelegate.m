@@ -7,7 +7,7 @@
 //
 
 #import "AppDelegate.h"
-
+#import "UserDefault.h"
 @interface AppDelegate ()
 
 @end
@@ -17,6 +17,7 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
+    UserDefaultEntity.zoneCode = @"410100000";
     return YES;
 }
 

@@ -10,6 +10,9 @@
 #import "LoginViewController.h"
 #import "ListTableViewCell.h"
 #import "OrderListViewController.h"
+#import "MyJiuYouViewController.h"
+#import "CheckInViewController.h"
+#import "AdressManageViewController.h"
 @interface PeopleViewController ()<UITableViewDataSource,UITableViewDelegate>
 @property (weak, nonatomic) IBOutlet UITableView *tableListView;
 
@@ -20,6 +23,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    self.title = @"我的酒运达";
     _tableListView.delegate = self;
     _tableListView.dataSource = self;
 //    UserDefaultEntity.session_id =@"0880bc2e-996f-4833-bd31-6793afc90c60";
@@ -103,18 +107,18 @@
         {
             switch (indexPath.row) {
                 case 0:
-                    cell.iconImageView.image = [UIImage imageNamed:@"android_personel_quickly_order.png"];
+                    cell.iconImageView.image = [UIImage imageNamed:@"j_friend.png"];
                     cell.titleLabel.text = @"我的J友";
                     break;
                 case 1:
-                    cell.iconImageView.image = [UIImage imageNamed:@"android_personel_quickly_order.png"];
+                    cell.iconImageView.image = [UIImage imageNamed:@"android_my_jd_wallet.png"];
                     cell.titleLabel.text = @"签到领豆";
                     break;
             }
         }
             break;
         case 2:
-            cell.iconImageView.image = [UIImage imageNamed:@"android_personel_quickly_order.png"];
+            cell.iconImageView.image = [UIImage imageNamed:@"android_my_jd_easy_mananger.png"];
             cell.titleLabel.text = @"地址管理";
             break;
     }
@@ -133,17 +137,35 @@
         {
             switch (indexPath.row) {
                 case 0:
-                    
+                {
+                    MyJiuYouViewController *verifiCodeViewController=[self.storyboard instantiateViewControllerWithIdentifier:@"MyJiuYouViewController"];
+                    [self.navigationController pushViewController:verifiCodeViewController animated:YES];
+                }
                     break;
                 case 1:
-                    
+                {
+                    CheckInViewController *verifiCodeViewController=[self.storyboard instantiateViewControllerWithIdentifier:@"CheckInViewController"];
+                    [self.navigationController pushViewController:verifiCodeViewController animated:YES];
+                }
                     break;
             }
         }
             break;
         case 2:
-            
+        {
+            AdressManageViewController *verifiCodeViewController=[self.storyboard instantiateViewControllerWithIdentifier:@"AdressManageViewController"];
+            [self.navigationController pushViewController:verifiCodeViewController animated:YES];
+        }
             break;
     }
 }
+-(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
+    
+    UITableViewCell *cell = [self tableView:tableView cellForRowAtIndexPath:indexPath];
+    return cell.frame.size.height;
+}
+- (IBAction)moreButtonClicked:(id)sender {
+    
+}
+
 @end

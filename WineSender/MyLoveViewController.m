@@ -17,7 +17,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-    self.title = @"我的酒爱";
+    self.title = @"发现";
     self.tableListView.delegate = self;
     self.tableListView.dataSource = self;
     [self.tableListView addHeaderWithTarget:self action:@selector(headerRereshing)];

@@ -16,6 +16,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    self.title = @"列表";
     // Do any additional setup after loading the view.
     _tableListView.delegate = self;
     _tableListView.dataSource = self;

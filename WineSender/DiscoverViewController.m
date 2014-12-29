@@ -19,6 +19,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    self.title = @"最爱";
     _tableListView.delegate = self;
     _tableListView.dataSource = self;
 }

@@ -22,7 +22,7 @@
 }
 -(void)updateController:(ProductListModel*)model
 {
-    [_iconImageView sd_setImageWithURL:[NSURL URLWithString:[@"http://fp.jydapp.com:82/fp/image/show.htm?path=" stringByAppendingString: model.furl]]];
+    [_iconImageView sd_setImageWithURL:[NSURL URLWithString:[@"http://fp.jydapp.com:82/fp/image/show.htm?path=" stringByAppendingString: model.furl]] placeholderImage:[UIImage imageNamed:@"no_image.9.png"]];
     _titleLabel.text = model.name;
     _inPriceLabel.text = [NSString stringWithFormat:@"%f", model.memberPrice];
     _outPriceLabel.text = [NSString stringWithFormat:@"%f",model.marketPrice];

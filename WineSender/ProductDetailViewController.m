@@ -12,12 +12,14 @@
 #import "ImageViewTableViewCell.h"
 #import "ImageModel.h"
 #import "AddCartModel.h"
+#import "LoginViewController.h"
 @interface ProductDetailViewController ()<UITableViewDataSource,UITableViewDelegate>
 {
     WineModel *wineModel;
     NSArray *imageUrlArray;
     NSArray *markList;
 }
+@property (weak, nonatomic) IBOutlet UIView *buyCartView;
 @property (weak, nonatomic) IBOutlet UILabel *cartCoutLabel;
 @property (weak, nonatomic) IBOutlet UITableView *tableListView;
 @property(nonatomic,strong)NSMutableArray *orderListArray;
@@ -27,12 +29,14 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    self.title = @"产品详情";
     // Do any additional setup after loading the view.
     self.tableListView.delegate = self;
     self.tableListView.dataSource = self;
     [self.tableListView addHeaderWithTarget:self action:@selector(headerRereshing)];
     [self.tableListView addFooterWithTarget:self action:@selector(footerRereshing)];
     
+//    _buyCartView.frame = CGRectMake(_buyCartView.frame.origin.x, self.view.frame.size.height- 44 - _buyCartView.frame.size.height, _buyCartView.frame.size.width ,_buyCartView.frame.size.height);
     NSMutableDictionary *dic = [[NSMutableDictionary alloc]init];
     [dic setValue:[NSDictionary dictionaryWithObjectsAndKeys:@"410100000",@"zoneCode",
                    self.vid,@"vid",
@@ -175,7 +179,22 @@
     UITableViewCell *cell = [self tableView:tableView cellForRowAtIndexPath:indexPath];
     return cell.frame.size.height;
 }
+
+
+-(BOOL)checkWhetherLogin
+{
+    if (UserDefaultEntity.session_id.length) {
+        return YES;
+    }
+    return NO;
+}
 - (IBAction)addToCartButtonClicked:(id)sender {
+    if (![self checkWhetherLogin]) {
+        //login
+    
+        LoginViewController *loginViewController=[self.storyboard instantiateViewControllerWithIdentifier:@"LoginViewController"];
+        [self.navigationController pushViewController:loginViewController animated:YES];
+    }
     NSMutableDictionary *dic = [[NSMutableDictionary alloc]init];
     NSArray *data = [NSArray arrayWithObjects:@{@"gid":self.gid,@"gcount":@1}, nil];
     [dic setValue:[NSDictionary dictionaryWithObjectsAndKeys:UserDefaultEntity.zoneCode,@"zoneCode",
@@ -191,6 +210,8 @@
         NSDictionary *dic = (NSDictionary*)returnObj;
         NSDictionary *returnArray=[NSJSONSerialization JSONObjectWithData:[[dic valueForKey:@"JSON_DATA"] dataUsingEncoding:NSUTF8StringEncoding] options:NSJSONReadingMutableLeaves error:nil];
         NSInteger result = [[returnArray valueForKey:@"result"]integerValue];
+        int gcount = [[returnArray valueForKey:@"gcount"]intValue];
+        _cartCoutLabel.text = [NSString stringWithFormat:@"%d",gcount];
     } requestFailure:^(NSString *errorString) {
         
     }];

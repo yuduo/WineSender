@@ -18,6 +18,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    self.title = @"订单查询";
     // Do any additional setup after loading the view.
     _tableListView.delegate = self;
     _tableListView.dataSource = self;

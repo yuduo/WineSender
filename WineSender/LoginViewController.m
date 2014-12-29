@@ -19,6 +19,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    self.title = @"登录";
     // Do any additional setup after loading the view.
     _phoneTextField.text = @"15838279930";
     _passwordTextField.text = @"123456";

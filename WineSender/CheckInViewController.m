@@ -7,7 +7,7 @@
 //
 
 #import "CheckInViewController.h"
-
+#import "TSMessage.h"
 @interface CheckInViewController ()
 
 @end
@@ -17,6 +17,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    self.title = @"签到";
 }
 
 - (void)didReceiveMemoryWarning {
@@ -45,9 +46,28 @@
     [self.netWorkOperation PostRequest:dic requestSuccess:^(NSString *returnObj) {
         NSLog(@"returnObj--%@",returnObj);
         NSDictionary *dic = (NSDictionary*)returnObj;
-        NSArray *returnArray=[NSJSONSerialization JSONObjectWithData:[[dic valueForKey:@"JSON_DATA"] dataUsingEncoding:NSUTF8StringEncoding] options:NSJSONReadingMutableLeaves error:nil];
+        NSDictionary *returnArray=[NSJSONSerialization JSONObjectWithData:[[dic valueForKey:@"JSON_DATA"] dataUsingEncoding:NSUTF8StringEncoding] options:NSJSONReadingMutableLeaves error:nil];
         
-        
+        NSInteger result = [[returnArray valueForKey:@"result"]integerValue];
+        switch (result) {
+            case 1:
+            {
+                [TSMessage showNotificationWithTitle:@"签到成功" type:TSMessageNotificationTypeSuccess];
+            }
+                break;
+            case 2:
+            {
+                [TSMessage showNotificationWithTitle:@"已经签过" type:TSMessageNotificationTypeWarning];
+            }
+                break;
+            case 0:
+            {
+                [TSMessage showNotificationWithTitle:@"签到失败" type:TSMessageNotificationTypeWarning];
+            }
+                break;
+            default:
+                break;
+        }
     } requestFailure:^(NSString *errorString) {
         
     }];

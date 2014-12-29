@@ -17,6 +17,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    self.title = @"分类";
     // Do any additional setup after loading the view, typically from a nib.
     _tableListView.delegate = self;
     _tableListView.dataSource = self;

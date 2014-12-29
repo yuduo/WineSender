@@ -19,6 +19,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    self.title = @"购物车";
     // Do any additional setup after loading the view.
     _tableListView.delegate = self;
     _tableListView.dataSource = self;
@@ -34,9 +35,7 @@
     NSMutableDictionary *dic = [[NSMutableDictionary alloc]init];
     [dic setValue:[NSDictionary dictionaryWithObjectsAndKeys:UserDefaultEntity.zoneCode,@"zoneCode",
                    UserDefaultEntity.uid,@"uid",
-                   @"2",@"type",
-                   [NSNumber numberWithInt:10],@"pagesize",
-                   [NSNumber numberWithInt:1],@"page",
+                   
                    nil] forKey:@"POST_DATA"];
     [dic setValue:@"getList" forKey:@"METHOD_NAME"];
     [dic setValue:UserDefaultEntity.session_id forKey:@"SESSION_ID"];

@@ -326,6 +326,14 @@
 		7DC1771E1A50FFAE0059D734 /* MyJiuYouViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7DC1771D1A50FFAE0059D734 /* MyJiuYouViewController.m */; };
 		7DC177211A5101070059D734 /* JiuYouModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 7DC177201A5101070059D734 /* JiuYouModel.m */; };
 		7DC177241A5101BB0059D734 /* CheckInViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7DC177231A5101BB0059D734 /* CheckInViewController.m */; };
+		7DC177281A5119030059D734 /* HotProductTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 7DC177261A5119030059D734 /* HotProductTableViewCell.m */; };
+		7DC177291A5119030059D734 /* HotProductTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7DC177271A5119030059D734 /* HotProductTableViewCell.xib */; };
+		7DC1772C1A511E0A0059D734 /* AdressManageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7DC1772B1A511E0A0059D734 /* AdressManageViewController.m */; };
+		7DC1773B1A51417B0059D734 /* AdressTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 7DC177391A51417B0059D734 /* AdressTableViewCell.m */; };
+		7DC1773C1A51417B0059D734 /* AdressTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7DC1773A1A51417B0059D734 /* AdressTableViewCell.xib */; };
+		7DC177401A5141910059D734 /* AddAdressTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 7DC1773E1A5141910059D734 /* AddAdressTableViewCell.m */; };
+		7DC177411A5141910059D734 /* AddAdressTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7DC1773F1A5141910059D734 /* AddAdressTableViewCell.xib */; };
+		7DC177441A5143630059D734 /* AdressModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 7DC177431A5143630059D734 /* AdressModel.m */; };
 		7DC895A81A502263000D6B1A /* ImageModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 7DC895A71A502263000D6B1A /* ImageModel.m */; };
 		7DC895AC1A50297A000D6B1A /* ImageViewTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 7DC895AA1A50297A000D6B1A /* ImageViewTableViewCell.m */; };
 		7DC895AD1A50297A000D6B1A /* ImageViewTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7DC895AB1A50297A000D6B1A /* ImageViewTableViewCell.xib */; };
@@ -778,6 +786,19 @@
 		7DC177201A5101070059D734 /* JiuYouModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JiuYouModel.m; sourceTree = "<group>"; };
 		7DC177221A5101BB0059D734 /* CheckInViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CheckInViewController.h; sourceTree = "<group>"; };
 		7DC177231A5101BB0059D734 /* CheckInViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CheckInViewController.m; sourceTree = "<group>"; };
+		7DC177251A5119030059D734 /* HotProductTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HotProductTableViewCell.h; sourceTree = "<group>"; };
+		7DC177261A5119030059D734 /* HotProductTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HotProductTableViewCell.m; sourceTree = "<group>"; };
+		7DC177271A5119030059D734 /* HotProductTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HotProductTableViewCell.xib; sourceTree = "<group>"; };
+		7DC1772A1A511E0A0059D734 /* AdressManageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AdressManageViewController.h; sourceTree = "<group>"; };
+		7DC1772B1A511E0A0059D734 /* AdressManageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AdressManageViewController.m; sourceTree = "<group>"; };
+		7DC177381A51417B0059D734 /* AdressTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AdressTableViewCell.h; sourceTree = "<group>"; };
+		7DC177391A51417B0059D734 /* AdressTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AdressTableViewCell.m; sourceTree = "<group>"; };
+		7DC1773A1A51417B0059D734 /* AdressTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AdressTableViewCell.xib; sourceTree = "<group>"; };
+		7DC1773D1A5141910059D734 /* AddAdressTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddAdressTableViewCell.h; sourceTree = "<group>"; };
+		7DC1773E1A5141910059D734 /* AddAdressTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddAdressTableViewCell.m; sourceTree = "<group>"; };
+		7DC1773F1A5141910059D734 /* AddAdressTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AddAdressTableViewCell.xib; sourceTree = "<group>"; };
+		7DC177421A5143630059D734 /* AdressModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AdressModel.h; sourceTree = "<group>"; };
+		7DC177431A5143630059D734 /* AdressModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AdressModel.m; sourceTree = "<group>"; };
 		7DC895A61A502263000D6B1A /* ImageModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ImageModel.h; sourceTree = "<group>"; };
 		7DC895A71A502263000D6B1A /* ImageModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ImageModel.m; sourceTree = "<group>"; };
 		7DC895A91A50297A000D6B1A /* ImageViewTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ImageViewTableViewCell.h; sourceTree = "<group>"; };
@@ -911,6 +932,8 @@
 				7DC1771D1A50FFAE0059D734 /* MyJiuYouViewController.m */,
 				7DC177221A5101BB0059D734 /* CheckInViewController.h */,
 				7DC177231A5101BB0059D734 /* CheckInViewController.m */,
+				7DC1772A1A511E0A0059D734 /* AdressManageViewController.h */,
+				7DC1772B1A511E0A0059D734 /* AdressManageViewController.m */,
 				7D5023321A4BA33B007967B8 /* Images.xcassets */,
 				7D5023341A4BA33B007967B8 /* LaunchScreen.xib */,
 				7D5023221A4BA33B007967B8 /* Supporting Files */,
@@ -1413,6 +1436,15 @@
 				7DC895A91A50297A000D6B1A /* ImageViewTableViewCell.h */,
 				7DC895AA1A50297A000D6B1A /* ImageViewTableViewCell.m */,
 				7DC895AB1A50297A000D6B1A /* ImageViewTableViewCell.xib */,
+				7DC177251A5119030059D734 /* HotProductTableViewCell.h */,
+				7DC177261A5119030059D734 /* HotProductTableViewCell.m */,
+				7DC177271A5119030059D734 /* HotProductTableViewCell.xib */,
+				7DC177381A51417B0059D734 /* AdressTableViewCell.h */,
+				7DC177391A51417B0059D734 /* AdressTableViewCell.m */,
+				7DC1773A1A51417B0059D734 /* AdressTableViewCell.xib */,
+				7DC1773D1A5141910059D734 /* AddAdressTableViewCell.h */,
+				7DC1773E1A5141910059D734 /* AddAdressTableViewCell.m */,
+				7DC1773F1A5141910059D734 /* AddAdressTableViewCell.xib */,
 			);
 			name = Cell;
 			sourceTree = "<group>";
@@ -1476,6 +1508,8 @@
 				7DC1771A1A50F2E60059D734 /* AddCartModel.m */,
 				7DC1771F1A5101070059D734 /* JiuYouModel.h */,
 				7DC177201A5101070059D734 /* JiuYouModel.m */,
+				7DC177421A5143630059D734 /* AdressModel.h */,
+				7DC177431A5143630059D734 /* AdressModel.m */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -1616,6 +1650,7 @@
 				7D5024431A4BA7B3007967B8 /* btn_check_on_disabled.png in Resources */,
 				7D5024171A4BA7B3007967B8 /* address_contacts_select_icon.png in Resources */,
 				7D5025891A4BA92C007967B8 /* NotificationBackgroundErrorIcon@2x.png in Resources */,
+				7DC177411A5141910059D734 /* AddAdressTableViewCell.xib in Resources */,
 				7D50249D1A4BA7B3007967B8 /* no_image.9.png in Resources */,
 				7D5024B81A4BA7B3007967B8 /* shortcuts_icon_collect.png in Resources */,
 				7D5024221A4BA7B3007967B8 /* android_my_jd_collects.png in Resources */,
@@ -1636,6 +1671,7 @@
 				7D5024371A4BA7B3007967B8 /* app_button_white_checked.9.png in Resources */,
 				7DF131971A4F97B300B9B442 /* Icon-60@3x.png in Resources */,
 				7D5024351A4BA7B3007967B8 /* android_title_r_button.9.png in Resources */,
+				7DC1773C1A51417B0059D734 /* AdressTableViewCell.xib in Resources */,
 				7D5024521A4BA7B3007967B8 /* edit_product_num_cancle_normal.png in Resources */,
 				7D50248E1A4BA7B3007967B8 /* message_btn_nor.9.png in Resources */,
 				7D50243B1A4BA7B3007967B8 /* as_input_frame.9.png in Resources */,
@@ -1720,6 +1756,7 @@
 				7D5024B01A4BA7B3007967B8 /* quick_register_login_default.png in Resources */,
 				7D5024C41A4BA7B3007967B8 /* sort_button_price_down.png in Resources */,
 				7DF131911A4F97B300B9B442 /* Icon-29.png in Resources */,
+				7DC177291A5119030059D734 /* HotProductTableViewCell.xib in Resources */,
 				7D5025681A4BA92C007967B8 /* LICENSE.txt in Resources */,
 				7D50246D1A4BA7B3007967B8 /* icon_st.png in Resources */,
 				7DF131921A4F97B300B9B442 /* Icon-29@2x.png in Resources */,
@@ -1830,6 +1867,7 @@
 				7D5025551A4BA92C007967B8 /* AFHTTPRequestOperation.m in Sources */,
 				7D50256A1A4BA92C007967B8 /* FMDatabase.m in Sources */,
 				7D50232E1A4BA33B007967B8 /* SecondViewController.m in Sources */,
+				7DC1772C1A511E0A0059D734 /* AdressManageViewController.m in Sources */,
 				7D83D4181A4EC1AD00E6C0FF /* OrderListTableViewCell.m in Sources */,
 				7DF131A51A4FB59A00B9B442 /* MarkModel.m in Sources */,
 				7DC1771B1A50F2E60059D734 /* AddCartModel.m in Sources */,
@@ -1874,9 +1912,11 @@
 				7D5025821A4BA92C007967B8 /* UIImageView+HighlightedWebCache.m in Sources */,
 				7D50257C1A4BA92C007967B8 /* SDWebImageDownloaderOperation.m in Sources */,
 				7D50232B1A4BA33B007967B8 /* FirstViewController.m in Sources */,
+				7DC177281A5119030059D734 /* HotProductTableViewCell.m in Sources */,
 				7D5023501A4BA3DC007967B8 /* BuyCartViewController.m in Sources */,
 				7D50259D1A4BAB58007967B8 /* LoginViewController.m in Sources */,
 				7D5025CC1A4BD6F1007967B8 /* MainRedWineViewController.m in Sources */,
+				7DC177401A5141910059D734 /* AddAdressTableViewCell.m in Sources */,
 				7D5025BE1A4BBB57007967B8 /* HexColor.m in Sources */,
 				7D5025981A4BA92C007967B8 /* TSMessage.m in Sources */,
 				7D5025651A4BA92C007967B8 /* UIProgressView+AFNetworking.m in Sources */,
@@ -1908,6 +1948,7 @@
 				7DC895BA1A502C1B000D6B1A /* SongVerticalScrollView.m in Sources */,
 				7D5025B61A4BBA6D007967B8 /* NetRequestOperation.m in Sources */,
 				7D83D4291A4ED39F00E6C0FF /* ProductListViewController.m in Sources */,
+				7DC1773B1A51417B0059D734 /* AdressTableViewCell.m in Sources */,
 				7D5025581A4BA92C007967B8 /* AFNetworkReachabilityManager.m in Sources */,
 				7DC895B91A502C1B000D6B1A /* SMPageControl.m in Sources */,
 				7D50256D1A4BA92C007967B8 /* FMDatabaseQueue.m in Sources */,
@@ -1916,6 +1957,7 @@
 				7D5025C91A4BD6CF007967B8 /* MainWhiteViewController.m in Sources */,
 				7D5025661A4BA92C007967B8 /* UIRefreshControl+AFNetworking.m in Sources */,
 				7D50255C1A4BA92C007967B8 /* AFURLResponseSerialization.m in Sources */,
+				7DC177441A5143630059D734 /* AdressModel.m in Sources */,
 				7DC177211A5101070059D734 /* JiuYouModel.m in Sources */,
 				7D50257F1A4BA92C007967B8 /* UIButton+WebCache.m in Sources */,
 				7D83D41D1A4EC50E00E6C0FF /* BuyCartTableViewCell.m in Sources */,

@@ -11,12 +11,14 @@
 @interface MyJiuYouViewController ()
 <UITableViewDataSource,UITableViewDelegate>
 @property (weak, nonatomic) IBOutlet UITableView *tableListView;
+@property(strong,nonatomic)NSMutableArray *listArray;
 @end
 
 @implementation MyJiuYouViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    self.title = @"我的酒爱";
     // Do any additional setup after loading the view.
     _tableListView.delegate = self;
     _tableListView.dataSource = self;
@@ -34,7 +36,8 @@
         NSDictionary *dic = (NSDictionary*)returnObj;
         NSArray *returnArray=[NSJSONSerialization JSONObjectWithData:[[dic valueForKey:@"JSON_DATA"] dataUsingEncoding:NSUTF8StringEncoding] options:NSJSONReadingMutableLeaves error:nil];
         
-        NSArray *buildList=[RMMapper arrayOfClass:[JiuYouModel class] fromArrayOfDictionary:returnArray];
+        _listArray=[[NSMutableArray alloc]initWithArray: [RMMapper arrayOfClass:[JiuYouModel class] fromArrayOfDictionary:returnArray]];
+        [_tableListView reloadData];
     } requestFailure:^(NSString *errorString) {
         
     }];
@@ -62,15 +65,15 @@
 
 -(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
     
-    return 1;
+    return [_listArray count];
 }
 
 
 -(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
     
     UITableViewCell *cell = [[UITableViewCell alloc]init];
-    
-    cell.textLabel.text = @"我的最爱";
+    JiuYouModel *model = [_listArray objectAtIndex:indexPath.row];
+    cell.textLabel.text = model.realName;
     return cell;
 }
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath

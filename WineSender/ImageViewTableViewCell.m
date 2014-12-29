@@ -30,7 +30,7 @@
             UIImageView *imageView = [[UIImageView alloc]init];
             imageView.frame        = CGRectMake(0, 0, 320, 168);
             
-            [imageView sd_setImageWithURL:[NSURL URLWithString:[@"http://fp.jydapp.com:82/fp/image/show.htm?path=" stringByAppendingString: model.path]]];
+            [imageView sd_setImageWithURL:[NSURL URLWithString:[@"http://fp.jydapp.com:82/fp/image/show.htm?path=" stringByAppendingString: model.path]]  placeholderImage:[UIImage imageNamed:@"no_image.9.png"]];
             return imageView;
         };
         
