@@ -7,7 +7,7 @@
 //
 
 #import "HotProductTableViewCell.h"
-#import "WineModel.h"
+#import "ProductListModel.h"
 #import "UIImageView+WebCache.h"
 @implementation HotProductTableViewCell
 
@@ -24,18 +24,18 @@
 {
     if ([array count] == 3) {
         {
-            WineModel *model = [array objectAtIndex:0];
+            ProductListModel *model = [array objectAtIndex:0];
             [_iconImageView1 sd_setImageWithURL:[NSURL URLWithString:[@"http://fp.jydapp.com:82/fp/image/show.htm?path=" stringByAppendingString: model.furl]] placeholderImage:[UIImage imageNamed:@"no_image.9.png"]];
             _nameLabel1.text = model.name;
             
         }
         {
-            WineModel *model = [array objectAtIndex:1];
+            ProductListModel *model = [array objectAtIndex:1];
             [_iconImageView2 sd_setImageWithURL:[NSURL URLWithString:[@"http://fp.jydapp.com:82/fp/image/show.htm?path=" stringByAppendingString: model.furl]] placeholderImage:[UIImage imageNamed:@"no_image.9.png"]];
             _nameLabel2.text = model.name;
         }
         {
-            WineModel *model = [array objectAtIndex:2];
+            ProductListModel *model = [array objectAtIndex:2];
             [_iconImageView3 sd_setImageWithURL:[NSURL URLWithString:[@"http://fp.jydapp.com:82/fp/image/show.htm?path=" stringByAppendingString: model.furl]] placeholderImage:[UIImage imageNamed:@"no_image.9.png"]];
             _nameLabel3.text = model.name;
         }

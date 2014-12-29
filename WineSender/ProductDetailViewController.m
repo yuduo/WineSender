@@ -197,7 +197,10 @@
     }
     NSMutableDictionary *dic = [[NSMutableDictionary alloc]init];
     NSArray *data = [NSArray arrayWithObjects:@{@"gid":self.gid,@"gcount":@1}, nil];
-    [dic setValue:[NSDictionary dictionaryWithObjectsAndKeys:UserDefaultEntity.zoneCode,@"zoneCode",
+    
+    [dic setValue:[NSDictionary dictionaryWithObjectsAndKeys:
+                   UserDefaultEntity.zoneCode,@"zoneCode",
+//                   @"410100000",@"zoneCode",
                    data,@"data",
                    UserDefaultEntity.uid ,@"uid",
                    nil] forKey:@"POST_DATA"];

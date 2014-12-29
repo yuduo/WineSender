@@ -9,7 +9,7 @@
 #import "HomeViewController.h"
 #import "ProductListViewController.h"
 #import "PictureModel.h"
-#import "WineModel.h"
+#import "ProductListModel.h"
 #import "HotProductTableViewCell.h"
 @interface HomeViewController ()<UITableViewDataSource,UITableViewDelegate>
 {
@@ -49,6 +49,7 @@
     
     _hotTableView.delegate = self;
     _hotTableView.dataSource = self;
+    
     // Do any additional setup after loading the view.
     NSMutableDictionary *dic = [[NSMutableDictionary alloc]init];
     [dic setValue:[NSDictionary dictionaryWithObjectsAndKeys:UserDefaultEntity.zoneCode,@"zoneCode",
@@ -73,7 +74,7 @@
     [self getHotList:53];
     [self getHotList:55];
     _mainScrollView.contentSize = CGSizeMake(self.view.frame.size.width, 800);
-    _hotTableView.contentSize = CGSizeMake(self.view.frame.size.width, 400);
+    _hotTableView.contentSize = CGSizeMake(self.view.frame.size.width, 500);
     
 }
 -(void)getHotList:(int)typeID
@@ -91,24 +92,28 @@
     [self.netWorkOperation PostRequest:dic requestSuccess:^(NSString *returnObj) {
         NSLog(@"returnObj--%@",returnObj);
         NSDictionary *dic = (NSDictionary*)returnObj;
+        if([dic valueForKey:@"JSON_DATA"] == nil)
+        {
+            return ;
+        }
         NSArray *returnArray=[NSJSONSerialization JSONObjectWithData:[[dic valueForKey:@"JSON_DATA"] dataUsingEncoding:NSUTF8StringEncoding] options:NSJSONReadingMutableLeaves error:nil];
         
         switch (typeID) {
             case 52:
             {
-                NSArray *buildList=[RMMapper arrayOfClass:[WineModel class] fromArrayOfDictionary:returnArray];
+                NSArray *buildList=[RMMapper arrayOfClass:[ProductListModel class] fromArrayOfDictionary:returnArray];
                 whiteArray = [[NSMutableArray alloc]initWithArray:buildList];
             }
                 break;
             case 53:
             {
-                NSArray *buildList=[RMMapper arrayOfClass:[WineModel class] fromArrayOfDictionary:returnArray];
+                NSArray *buildList=[RMMapper arrayOfClass:[ProductListModel class] fromArrayOfDictionary:returnArray];
                 redArray = [[NSMutableArray alloc]initWithArray:buildList];
             }
                 break;
             case 55:
             {
-                NSArray *buildList=[RMMapper arrayOfClass:[WineModel class] fromArrayOfDictionary:returnArray];
+                NSArray *buildList=[RMMapper arrayOfClass:[ProductListModel class] fromArrayOfDictionary:returnArray];
                 yangArray = [[NSMutableArray alloc]initWithArray:buildList];
             }
                 break;
@@ -215,7 +220,7 @@
         default:
             break;
     }
-    
+    cell.selectionStyle = UITableViewCellSelectionStyleNone;
     return cell;
 }
 

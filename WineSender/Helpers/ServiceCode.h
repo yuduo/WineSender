@@ -10,6 +10,7 @@
 //调试环境App服务外网地址：
 //#define SERVICE_URL @"http://114.215.201.181/JiuYunDaService.asmx"
 #define SERVICE_URL @"http://125.40.63.12:8089/h2ycmbs/h2ycmbs/doMbs.htm"
+//#define SERVICE_URL @"http://125.40.63.12:8010/h2ycmbs/h2ycmbs/doMbs.htm"
 #define PROJECT_URL @"http://58.210.187.2:8070"
 
 //中海测试环境

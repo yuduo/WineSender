@@ -69,7 +69,14 @@
         NSDictionary *dic = (NSDictionary*)returnObj;
         UserDefaultEntity.session_id = [dic valueForKey:@"SESSION_ID"];
         UserDefaultEntity.uid = [[dic valueForKey:@"OBJECT_DATA"] valueForKey:@"id"];
-        UserDefaultEntity.zoneCode = [[dic valueForKey:@"OBJECT_DATA"] valueForKey:@"zone"];
+        id value = [[dic valueForKey:@"OBJECT_DATA"] valueForKey:@"zone"];
+        if (value == nil || value == [NSNull null]) {
+             UserDefaultEntity.zoneCode =@"410100000";
+        }
+       
+//        if ( [str isEqualToString:@"<null>"]) {
+//            UserDefaultEntity.zoneCode = @"410100000";
+//        }
         UserDefaultEntity.account = [[dic valueForKey:@"OBJECT_DATA"] valueForKey:@"account"];
         if (UserDefaultEntity.zoneCode == nil) {
             UserDefaultEntity.zoneCode = @"410100000";
