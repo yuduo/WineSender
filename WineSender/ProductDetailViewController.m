@@ -11,6 +11,7 @@
 #import "MarkModel.h"
 #import "ImageViewTableViewCell.h"
 #import "ImageModel.h"
+#import "AddCartModel.h"
 @interface ProductDetailViewController ()<UITableViewDataSource,UITableViewDelegate>
 {
     WineModel *wineModel;
@@ -188,8 +189,8 @@
     [self.netWorkOperation PostRequest:dic requestSuccess:^(NSString *returnObj) {
         NSLog(@"returnObj--%@",returnObj);
         NSDictionary *dic = (NSDictionary*)returnObj;
-        NSArray *returnArray=[NSJSONSerialization JSONObjectWithData:[[dic valueForKey:@"JSON_DATA"] dataUsingEncoding:NSUTF8StringEncoding] options:NSJSONReadingMutableLeaves error:nil];
-        
+        NSDictionary *returnArray=[NSJSONSerialization JSONObjectWithData:[[dic valueForKey:@"JSON_DATA"] dataUsingEncoding:NSUTF8StringEncoding] options:NSJSONReadingMutableLeaves error:nil];
+        NSInteger result = [[returnArray valueForKey:@"result"]integerValue];
     } requestFailure:^(NSString *errorString) {
         
     }];

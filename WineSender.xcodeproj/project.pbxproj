@@ -322,6 +322,10 @@
 		7DB042281A4E556E002F8583 /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7DB042271A4E556E002F8583 /* MessageUI.framework */; };
 		7DB0422A1A4E55AB002F8583 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7DB042291A4E55AB002F8583 /* Foundation.framework */; };
 		7DB0422C1A4E55BF002F8583 /* CoreFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7DB0422B1A4E55BF002F8583 /* CoreFoundation.framework */; };
+		7DC1771B1A50F2E60059D734 /* AddCartModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 7DC1771A1A50F2E60059D734 /* AddCartModel.m */; };
+		7DC1771E1A50FFAE0059D734 /* MyJiuYouViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7DC1771D1A50FFAE0059D734 /* MyJiuYouViewController.m */; };
+		7DC177211A5101070059D734 /* JiuYouModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 7DC177201A5101070059D734 /* JiuYouModel.m */; };
+		7DC177241A5101BB0059D734 /* CheckInViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7DC177231A5101BB0059D734 /* CheckInViewController.m */; };
 		7DC895A81A502263000D6B1A /* ImageModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 7DC895A71A502263000D6B1A /* ImageModel.m */; };
 		7DC895AC1A50297A000D6B1A /* ImageViewTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 7DC895AA1A50297A000D6B1A /* ImageViewTableViewCell.m */; };
 		7DC895AD1A50297A000D6B1A /* ImageViewTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7DC895AB1A50297A000D6B1A /* ImageViewTableViewCell.xib */; };
@@ -766,6 +770,14 @@
 		7DB042271A4E556E002F8583 /* MessageUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MessageUI.framework; path = System/Library/Frameworks/MessageUI.framework; sourceTree = SDKROOT; };
 		7DB042291A4E55AB002F8583 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		7DB0422B1A4E55BF002F8583 /* CoreFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreFoundation.framework; path = System/Library/Frameworks/CoreFoundation.framework; sourceTree = SDKROOT; };
+		7DC177191A50F2E60059D734 /* AddCartModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddCartModel.h; sourceTree = "<group>"; };
+		7DC1771A1A50F2E60059D734 /* AddCartModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddCartModel.m; sourceTree = "<group>"; };
+		7DC1771C1A50FFAE0059D734 /* MyJiuYouViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyJiuYouViewController.h; sourceTree = "<group>"; };
+		7DC1771D1A50FFAE0059D734 /* MyJiuYouViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyJiuYouViewController.m; sourceTree = "<group>"; };
+		7DC1771F1A5101070059D734 /* JiuYouModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JiuYouModel.h; sourceTree = "<group>"; };
+		7DC177201A5101070059D734 /* JiuYouModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JiuYouModel.m; sourceTree = "<group>"; };
+		7DC177221A5101BB0059D734 /* CheckInViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CheckInViewController.h; sourceTree = "<group>"; };
+		7DC177231A5101BB0059D734 /* CheckInViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CheckInViewController.m; sourceTree = "<group>"; };
 		7DC895A61A502263000D6B1A /* ImageModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ImageModel.h; sourceTree = "<group>"; };
 		7DC895A71A502263000D6B1A /* ImageModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ImageModel.m; sourceTree = "<group>"; };
 		7DC895A91A50297A000D6B1A /* ImageViewTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ImageViewTableViewCell.h; sourceTree = "<group>"; };
@@ -895,6 +907,10 @@
 				7DF1319B1A4F9C3000B9B442 /* DiscoverViewController.m */,
 				7DF1319D1A4F9E1500B9B442 /* MyLoveViewController.h */,
 				7DF1319E1A4F9E1500B9B442 /* MyLoveViewController.m */,
+				7DC1771C1A50FFAE0059D734 /* MyJiuYouViewController.h */,
+				7DC1771D1A50FFAE0059D734 /* MyJiuYouViewController.m */,
+				7DC177221A5101BB0059D734 /* CheckInViewController.h */,
+				7DC177231A5101BB0059D734 /* CheckInViewController.m */,
 				7D5023321A4BA33B007967B8 /* Images.xcassets */,
 				7D5023341A4BA33B007967B8 /* LaunchScreen.xib */,
 				7D5023221A4BA33B007967B8 /* Supporting Files */,
@@ -1456,6 +1472,10 @@
 				7D9F04A31A4FD6F40098F88F /* PictureModel.m */,
 				7DC895A61A502263000D6B1A /* ImageModel.h */,
 				7DC895A71A502263000D6B1A /* ImageModel.m */,
+				7DC177191A50F2E60059D734 /* AddCartModel.h */,
+				7DC1771A1A50F2E60059D734 /* AddCartModel.m */,
+				7DC1771F1A5101070059D734 /* JiuYouModel.h */,
+				7DC177201A5101070059D734 /* JiuYouModel.m */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -1812,10 +1832,12 @@
 				7D50232E1A4BA33B007967B8 /* SecondViewController.m in Sources */,
 				7D83D4181A4EC1AD00E6C0FF /* OrderListTableViewCell.m in Sources */,
 				7DF131A51A4FB59A00B9B442 /* MarkModel.m in Sources */,
+				7DC1771B1A50F2E60059D734 /* AddCartModel.m in Sources */,
 				7DB042111A4E525E002F8583 /* MJRefreshFooterView.m in Sources */,
 				7D5025601A4BA92C007967B8 /* AFNetworkActivityIndicatorManager.m in Sources */,
 				7D50256E1A4BA92C007967B8 /* FMResultSet.m in Sources */,
 				7D5025641A4BA92C007967B8 /* UIImageView+AFNetworking.m in Sources */,
+				7DC177241A5101BB0059D734 /* CheckInViewController.m in Sources */,
 				7D50256C1A4BA92C007967B8 /* FMDatabasePool.m in Sources */,
 				7D83D42F1A4EE77F00E6C0FF /* ProductDetailViewController.m in Sources */,
 				7DB041F81A4E475E002F8583 /* ListTableViewCell.m in Sources */,
@@ -1873,6 +1895,7 @@
 				7DC895AC1A50297A000D6B1A /* ImageViewTableViewCell.m in Sources */,
 				7D5025731A4BA92C007967B8 /* MBProgressHUD.m in Sources */,
 				7D5025761A4BA92C007967B8 /* README.md in Sources */,
+				7DC1771E1A50FFAE0059D734 /* MyJiuYouViewController.m in Sources */,
 				7D50259A1A4BA92C007967B8 /* README.md in Sources */,
 				7D9F04A41A4FD6F40098F88F /* PictureModel.m in Sources */,
 				7DB042121A4E525E002F8583 /* MJRefreshHeaderView.m in Sources */,
@@ -1893,6 +1916,7 @@
 				7D5025C91A4BD6CF007967B8 /* MainWhiteViewController.m in Sources */,
 				7D5025661A4BA92C007967B8 /* UIRefreshControl+AFNetworking.m in Sources */,
 				7D50255C1A4BA92C007967B8 /* AFURLResponseSerialization.m in Sources */,
+				7DC177211A5101070059D734 /* JiuYouModel.m in Sources */,
 				7D50257F1A4BA92C007967B8 /* UIButton+WebCache.m in Sources */,
 				7D83D41D1A4EC50E00E6C0FF /* BuyCartTableViewCell.m in Sources */,
 				7DC895B71A502C1B000D6B1A /* CycleScrollView.m in Sources */,

@@ -16,9 +16,8 @@
 @property (weak, nonatomic) IBOutlet UIButton *yangjiuButton;
 @property (weak, nonatomic) IBOutlet UIButton *qitaButton;
 @property (weak, nonatomic) IBOutlet UIButton *rexiaoButton;
-@property (weak, nonatomic) IBOutlet UIButton *baijiuHotButton;
-@property (weak, nonatomic) IBOutlet UIButton *hongjiuHotButton;
-@property (weak, nonatomic) IBOutlet UIButton *yangjiuHotButton;
+@property (weak, nonatomic) IBOutlet UIScrollView *mainScrollView;
+@property (weak, nonatomic) IBOutlet UITableView *hotTableView;
 
 @end
 

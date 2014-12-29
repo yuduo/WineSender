@@ -10,6 +10,7 @@
 
 @property(nonatomic,strong) NSString* session_id;
 @property(nonatomic,strong) NSString* uid;
+@property(nonatomic,strong) NSString* account;
 @property(nonatomic,strong) NSString* zoneCode;
 +(UserDefault *)currentDefault;
 +(void)saveUserDefault;

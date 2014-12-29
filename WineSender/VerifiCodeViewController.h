@@ -9,5 +9,5 @@
 #import "CommonViewController.h"
 
 @interface VerifiCodeViewController : CommonViewController
-
+@property(nonatomic,strong)NSString *account;
 @end

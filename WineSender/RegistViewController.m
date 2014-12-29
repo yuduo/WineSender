@@ -8,6 +8,7 @@
 
 #import "RegistViewController.h"
 #import "VerifiCodeViewController.h"
+#import "TSMessage.h"
 @interface RegistViewController ()
 @property (weak, nonatomic) IBOutlet UITextField *phoneTextField;
 
@@ -18,6 +19,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    
 }
 
 - (void)didReceiveMemoryWarning {
@@ -35,11 +37,14 @@
 }
 */
 - (IBAction)nextStepButtonClicked:(id)sender {
-    
+    if (_phoneTextField.text.length<1) {
+        [TSMessage showNotificationWithTitle:@"请输入您的账号" type:TSMessageNotificationTypeWarning];
+        return;
+    }
     NSMutableDictionary *dic = [[NSMutableDictionary alloc]init];
     [dic setValue:[NSDictionary dictionaryWithObjectsAndKeys:@"2",@"type",
                    @"h2yAndroidRegister",@"mCode",
-                   @"18662302973",@"account",
+                   _phoneTextField.text,@"account",
                    nil] forKey:@"POST_DATA"];
     [dic setValue:@"mobileCode" forKey:@"METHOD_NAME"];
     [dic setValue:@"" forKey:@"SESSION_ID"];
@@ -47,8 +52,15 @@
     
     [self.netWorkOperation PostRequest:dic requestSuccess:^(NSString *returnObj) {
         NSLog(@"returnObj--%@",returnObj);
-        VerifiCodeViewController *verifiCodeViewController=[self.storyboard instantiateViewControllerWithIdentifier:@"verifiCodeViewController"];
-        [self.navigationController pushViewController:verifiCodeViewController animated:YES];
+        NSDictionary *dic = (NSDictionary*)returnObj;
+        NSDictionary *returnArray=[NSJSONSerialization JSONObjectWithData:[[dic valueForKey:@"JSON_DATA"] dataUsingEncoding:NSUTF8StringEncoding] options:NSJSONReadingMutableLeaves error:nil];
+        NSInteger res = [[returnArray valueForKey:@"result"]integerValue];
+        if (res) {
+            VerifiCodeViewController *verifiCodeViewController=[self.storyboard instantiateViewControllerWithIdentifier:@"verifiCodeViewController"];
+            verifiCodeViewController.account =_phoneTextField.text;
+            [self.navigationController pushViewController:verifiCodeViewController animated:YES];
+        }
+       
     } requestFailure:^(NSString *errorString) {
         
     }];
