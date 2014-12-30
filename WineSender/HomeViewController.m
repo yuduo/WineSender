@@ -73,9 +73,9 @@
     [self getHotList:52];
     [self getHotList:53];
     [self getHotList:55];
+    _hotTableView.contentSize = CGSizeMake(self.view.frame.size.width, 400);
     _mainScrollView.contentSize = CGSizeMake(self.view.frame.size.width, 800);
-    _hotTableView.contentSize = CGSizeMake(self.view.frame.size.width, 500);
-    
+
 }
 -(void)getHotList:(int)typeID
 {

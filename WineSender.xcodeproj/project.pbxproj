@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7D41E98C1A5285900022441C /* ForgetPasswordViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D41E98B1A5285900022441C /* ForgetPasswordViewController.m */; };
+		7D41E98F1A528FE90022441C /* ForgetPasswordVerifyViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D41E98E1A528FE90022441C /* ForgetPasswordVerifyViewController.m */; };
 		7D5023251A4BA33B007967B8 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D5023241A4BA33B007967B8 /* main.m */; };
 		7D5023281A4BA33B007967B8 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D5023271A4BA33B007967B8 /* AppDelegate.m */; };
 		7D50232B1A4BA33B007967B8 /* FirstViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D50232A1A4BA33B007967B8 /* FirstViewController.m */; };
@@ -367,6 +369,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		7D41E98A1A5285900022441C /* ForgetPasswordViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ForgetPasswordViewController.h; sourceTree = "<group>"; };
+		7D41E98B1A5285900022441C /* ForgetPasswordViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ForgetPasswordViewController.m; sourceTree = "<group>"; };
+		7D41E98D1A528FE90022441C /* ForgetPasswordVerifyViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ForgetPasswordVerifyViewController.h; sourceTree = "<group>"; };
+		7D41E98E1A528FE90022441C /* ForgetPasswordVerifyViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ForgetPasswordVerifyViewController.m; sourceTree = "<group>"; };
 		7D50231F1A4BA33B007967B8 /* WineSender.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WineSender.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7D5023231A4BA33B007967B8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		7D5023241A4BA33B007967B8 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -934,6 +940,10 @@
 				7DC177231A5101BB0059D734 /* CheckInViewController.m */,
 				7DC1772A1A511E0A0059D734 /* AdressManageViewController.h */,
 				7DC1772B1A511E0A0059D734 /* AdressManageViewController.m */,
+				7D41E98A1A5285900022441C /* ForgetPasswordViewController.h */,
+				7D41E98B1A5285900022441C /* ForgetPasswordViewController.m */,
+				7D41E98D1A528FE90022441C /* ForgetPasswordVerifyViewController.h */,
+				7D41E98E1A528FE90022441C /* ForgetPasswordVerifyViewController.m */,
 				7D5023321A4BA33B007967B8 /* Images.xcassets */,
 				7D5023341A4BA33B007967B8 /* LaunchScreen.xib */,
 				7D5023221A4BA33B007967B8 /* Supporting Files */,
@@ -1888,6 +1898,7 @@
 				7D5025611A4BA92C007967B8 /* UIActivityIndicatorView+AFNetworking.m in Sources */,
 				7D83D4321A4EE8C000E6C0FF /* HomeViewController.m in Sources */,
 				7D5025671A4BA92C007967B8 /* UIWebView+AFNetworking.m in Sources */,
+				7D41E98F1A528FE90022441C /* ForgetPasswordVerifyViewController.m in Sources */,
 				7D5025CF1A4BD702007967B8 /* MainYangViewController.m in Sources */,
 				7DC895A81A502263000D6B1A /* ImageModel.m in Sources */,
 				7D5025811A4BA92C007967B8 /* UIImage+MultiFormat.m in Sources */,
@@ -1954,6 +1965,7 @@
 				7DC895B91A502C1B000D6B1A /* SMPageControl.m in Sources */,
 				7D50256D1A4BA92C007967B8 /* FMDatabaseQueue.m in Sources */,
 				7D5025A01A4BAB6E007967B8 /* RegistViewController.m in Sources */,
+				7D41E98C1A5285900022441C /* ForgetPasswordViewController.m in Sources */,
 				7D5025971A4BA92C007967B8 /* TSBlurView.m in Sources */,
 				7D5025C91A4BD6CF007967B8 /* MainWhiteViewController.m in Sources */,
 				7D5025661A4BA92C007967B8 /* UIRefreshControl+AFNetworking.m in Sources */,

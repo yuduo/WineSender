@@ -13,6 +13,7 @@
 @interface BuyCartViewController ()<UITableViewDataSource,UITableViewDelegate>
 @property (weak, nonatomic) IBOutlet UITableView *tableListView;
 @property(nonatomic,strong)NSMutableArray *orderListArray;
+@property (weak, nonatomic) IBOutlet UILabel *totoalLabel;
 @end
 
 @implementation BuyCartViewController
@@ -48,6 +49,12 @@
         NSArray *buildList=[RMMapper arrayOfClass:[BuyCardListModel class] fromArrayOfDictionary:returnArray];
         _orderListArray = [[NSMutableArray alloc]initWithArray:buildList];
         [_tableListView reloadData];
+        float price = 0;
+        for (int i = 0; i < [_orderListArray count]; i ++) {
+            BuyCardListModel *model = [_orderListArray objectAtIndex:i];
+            price += (float)model.count*model.memberPrice;
+        }
+        _totoalLabel.text = [NSString stringWithFormat:@"%f",price] ;
     } requestFailure:^(NSString *errorString) {
         
     }];
@@ -116,8 +123,35 @@
         }
     }
     [cell updateController:model];
+    cell.addButton.tag = indexPath.row;
+    cell.cutButton.tag = indexPath.row;
+    [cell.addButton addTarget:self action:@selector(addButtonClicked:) forControlEvents:UIControlEventTouchUpInside];
+    [cell.cutButton addTarget:self action:@selector(cutButtonClicked:) forControlEvents:UIControlEventTouchUpInside];
     cell.selectionStyle = UITableViewCellSelectionStyleNone;
     return cell;
+}
+-(void)addButtonClicked:(id)sender
+{
+    UIButton *button = (UIButton*)sender;
+    if (_orderListArray.count > button.tag) {
+        BuyCardListModel *model =  [_orderListArray objectAtIndex:button.tag];
+        model.count=model.count+1;
+        [_orderListArray replaceObjectAtIndex:button.tag withObject:model];
+    }
+    [_tableListView reloadData];
+}
+-(void)cutButtonClicked:(id)sender
+{
+    UIButton *button = (UIButton*)sender;
+    if (_orderListArray.count > button.tag) {
+        BuyCardListModel *model =  [_orderListArray objectAtIndex:button.tag];
+        if (model.count==0) {
+            return;
+        }
+        model.count=model.count-1;
+        [_orderListArray replaceObjectAtIndex:button.tag withObject:model];
+    }
+    [_tableListView reloadData];
 }
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
@@ -128,4 +162,7 @@
     UITableViewCell *cell = [self tableView:tableView cellForRowAtIndexPath:indexPath];
     return cell.frame.size.height;
 }
+- (IBAction)goToPayClicked:(id)sender {
+}
+
 @end

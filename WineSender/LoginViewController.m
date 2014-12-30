@@ -9,6 +9,7 @@
 #import "LoginViewController.h"
 #import "RegistViewController.h"
 #import "TSMessage.h"
+#import "ForgetPasswordVerifyViewController.h"
 @interface LoginViewController ()
 @property (weak, nonatomic) IBOutlet UITextField *phoneTextField;
 @property (weak, nonatomic) IBOutlet UITextField *passwordTextField;
@@ -87,6 +88,8 @@
     }];
 }
 - (IBAction)forgetPasswordButtonClicked:(id)sender {
+    ForgetPasswordVerifyViewController *registViewController=[self.storyboard instantiateViewControllerWithIdentifier:@"ForgetPasswordVerifyViewController"];
+    [self.navigationController pushViewController:registViewController animated:YES];
 }
 
 @end
