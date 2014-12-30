@@ -9,14 +9,12 @@
 #import <Foundation/Foundation.h>
 
 @interface BuyCardListModel : NSObject
-@property(nonatomic,strong)NSString*  id;
-@property(nonatomic,strong)NSString* orderFlag;
-@property(nonatomic,strong)NSString* orderNo;
-@property(nonatomic,strong)NSString* goodsAmount;
-@property(nonatomic,strong)NSString* flagValue;
-@property(nonatomic,strong)NSString* receiveName;
-@property(nonatomic,strong)NSString* receiveAddress;
-@property(nonatomic,strong)NSString* memberMobile;
-@property(nonatomic,strong)NSString* memberName;
-@property(nonatomic,strong)NSString* createDate;
+@property(nonatomic,strong)NSString*  fid;
+@property(nonatomic,assign )int count;
+@property(nonatomic,assign)int gid;
+@property(nonatomic,assign)float memberPrice;
+@property(nonatomic,assign)int cid;
+@property(nonatomic,assign)float version;
+@property(nonatomic,strong)NSString*  furl;
+@property(nonatomic,strong)NSString*  name;
 @end
