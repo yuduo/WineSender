@@ -1,5 +1,5 @@
 //
-//  MoreViewController.h
+//  ChangePasswordViewController.h
 //  WineSender
 //
 //  Created by michael on 1/5/15.
@@ -8,6 +8,6 @@
 
 #import "CommonViewController.h"
 
-@interface MoreViewController : CommonViewController
+@interface ChangePasswordViewController : CommonViewController
 
 @end

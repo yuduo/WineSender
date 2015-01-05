@@ -7,6 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7D11C8B71A5AB5DA0026DB84 /* MoreViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D11C8B61A5AB5DA0026DB84 /* MoreViewController.m */; };
+		7D11C8BA1A5AB9630026DB84 /* ChangePasswordViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D11C8B91A5AB9630026DB84 /* ChangePasswordViewController.m */; };
+		7D11C8BD1A5AC0590026DB84 /* EditInformationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D11C8BC1A5AC0590026DB84 /* EditInformationViewController.m */; };
+		7D11C8C01A5AC6820026DB84 /* PostOrderViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D11C8BF1A5AC6820026DB84 /* PostOrderViewController.m */; };
+		7D11C8C31A5ACC2B0026DB84 /* AddAdressViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D11C8C21A5ACC2B0026DB84 /* AddAdressViewController.m */; };
+		7D11C8C71A5AD2C30026DB84 /* PostCartTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D11C8C51A5AD2C30026DB84 /* PostCartTableViewCell.m */; };
+		7D11C8C81A5AD2C30026DB84 /* PostCartTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7D11C8C61A5AD2C30026DB84 /* PostCartTableViewCell.xib */; };
 		7D41E98C1A5285900022441C /* ForgetPasswordViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D41E98B1A5285900022441C /* ForgetPasswordViewController.m */; };
 		7D41E98F1A528FE90022441C /* ForgetPasswordVerifyViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D41E98E1A528FE90022441C /* ForgetPasswordVerifyViewController.m */; };
 		7D5023251A4BA33B007967B8 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D5023241A4BA33B007967B8 /* main.m */; };
@@ -20,7 +27,6 @@
 		7D50234D1A4BA392007967B8 /* CommonViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D50234C1A4BA392007967B8 /* CommonViewController.m */; };
 		7D5023501A4BA3DC007967B8 /* BuyCartViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D50234F1A4BA3DC007967B8 /* BuyCartViewController.m */; };
 		7D5023531A4BA3F8007967B8 /* PeopleViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D5023521A4BA3F8007967B8 /* PeopleViewController.m */; };
-		7D5023561A4BA405007967B8 /* MoreViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D5023551A4BA404007967B8 /* MoreViewController.m */; };
 		7D5024151A4BA7B3007967B8 /* add_to_car_button_normal.9.png in Resources */ = {isa = PBXBuildFile; fileRef = 7D5023581A4BA7B3007967B8 /* add_to_car_button_normal.9.png */; };
 		7D5024161A4BA7B3007967B8 /* add_to_car_button_press.9.png in Resources */ = {isa = PBXBuildFile; fileRef = 7D5023591A4BA7B3007967B8 /* add_to_car_button_press.9.png */; };
 		7D5024171A4BA7B3007967B8 /* address_contacts_select_icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 7D50235A1A4BA7B3007967B8 /* address_contacts_select_icon.png */; };
@@ -369,6 +375,19 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		7D11C8B51A5AB5DA0026DB84 /* MoreViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MoreViewController.h; sourceTree = "<group>"; };
+		7D11C8B61A5AB5DA0026DB84 /* MoreViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MoreViewController.m; sourceTree = "<group>"; };
+		7D11C8B81A5AB9630026DB84 /* ChangePasswordViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChangePasswordViewController.h; sourceTree = "<group>"; };
+		7D11C8B91A5AB9630026DB84 /* ChangePasswordViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChangePasswordViewController.m; sourceTree = "<group>"; };
+		7D11C8BB1A5AC0590026DB84 /* EditInformationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EditInformationViewController.h; sourceTree = "<group>"; };
+		7D11C8BC1A5AC0590026DB84 /* EditInformationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EditInformationViewController.m; sourceTree = "<group>"; };
+		7D11C8BE1A5AC6820026DB84 /* PostOrderViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PostOrderViewController.h; sourceTree = "<group>"; };
+		7D11C8BF1A5AC6820026DB84 /* PostOrderViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PostOrderViewController.m; sourceTree = "<group>"; };
+		7D11C8C11A5ACC2B0026DB84 /* AddAdressViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddAdressViewController.h; sourceTree = "<group>"; };
+		7D11C8C21A5ACC2B0026DB84 /* AddAdressViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddAdressViewController.m; sourceTree = "<group>"; };
+		7D11C8C41A5AD2C30026DB84 /* PostCartTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PostCartTableViewCell.h; sourceTree = "<group>"; };
+		7D11C8C51A5AD2C30026DB84 /* PostCartTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PostCartTableViewCell.m; sourceTree = "<group>"; };
+		7D11C8C61A5AD2C30026DB84 /* PostCartTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PostCartTableViewCell.xib; sourceTree = "<group>"; };
 		7D41E98A1A5285900022441C /* ForgetPasswordViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ForgetPasswordViewController.h; sourceTree = "<group>"; };
 		7D41E98B1A5285900022441C /* ForgetPasswordViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ForgetPasswordViewController.m; sourceTree = "<group>"; };
 		7D41E98D1A528FE90022441C /* ForgetPasswordVerifyViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ForgetPasswordVerifyViewController.h; sourceTree = "<group>"; };
@@ -394,8 +413,6 @@
 		7D50234F1A4BA3DC007967B8 /* BuyCartViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BuyCartViewController.m; sourceTree = "<group>"; };
 		7D5023511A4BA3F8007967B8 /* PeopleViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PeopleViewController.h; sourceTree = "<group>"; };
 		7D5023521A4BA3F8007967B8 /* PeopleViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PeopleViewController.m; sourceTree = "<group>"; };
-		7D5023541A4BA404007967B8 /* MoreViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MoreViewController.h; sourceTree = "<group>"; };
-		7D5023551A4BA404007967B8 /* MoreViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MoreViewController.m; sourceTree = "<group>"; };
 		7D5023581A4BA7B3007967B8 /* add_to_car_button_normal.9.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = add_to_car_button_normal.9.png; sourceTree = "<group>"; };
 		7D5023591A4BA7B3007967B8 /* add_to_car_button_press.9.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = add_to_car_button_press.9.png; sourceTree = "<group>"; };
 		7D50235A1A4BA7B3007967B8 /* address_contacts_select_icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = address_contacts_select_icon.png; sourceTree = "<group>"; };
@@ -903,8 +920,6 @@
 				7D50234F1A4BA3DC007967B8 /* BuyCartViewController.m */,
 				7D5023511A4BA3F8007967B8 /* PeopleViewController.h */,
 				7D5023521A4BA3F8007967B8 /* PeopleViewController.m */,
-				7D5023541A4BA404007967B8 /* MoreViewController.h */,
-				7D5023551A4BA404007967B8 /* MoreViewController.m */,
 				7D50259B1A4BAB58007967B8 /* LoginViewController.h */,
 				7D50259C1A4BAB58007967B8 /* LoginViewController.m */,
 				7D50259E1A4BAB6E007967B8 /* RegistViewController.h */,
@@ -944,6 +959,16 @@
 				7D41E98B1A5285900022441C /* ForgetPasswordViewController.m */,
 				7D41E98D1A528FE90022441C /* ForgetPasswordVerifyViewController.h */,
 				7D41E98E1A528FE90022441C /* ForgetPasswordVerifyViewController.m */,
+				7D11C8B51A5AB5DA0026DB84 /* MoreViewController.h */,
+				7D11C8B61A5AB5DA0026DB84 /* MoreViewController.m */,
+				7D11C8B81A5AB9630026DB84 /* ChangePasswordViewController.h */,
+				7D11C8B91A5AB9630026DB84 /* ChangePasswordViewController.m */,
+				7D11C8BB1A5AC0590026DB84 /* EditInformationViewController.h */,
+				7D11C8BC1A5AC0590026DB84 /* EditInformationViewController.m */,
+				7D11C8BE1A5AC6820026DB84 /* PostOrderViewController.h */,
+				7D11C8BF1A5AC6820026DB84 /* PostOrderViewController.m */,
+				7D11C8C11A5ACC2B0026DB84 /* AddAdressViewController.h */,
+				7D11C8C21A5ACC2B0026DB84 /* AddAdressViewController.m */,
 				7D5023321A4BA33B007967B8 /* Images.xcassets */,
 				7D5023341A4BA33B007967B8 /* LaunchScreen.xib */,
 				7D5023221A4BA33B007967B8 /* Supporting Files */,
@@ -1431,6 +1456,9 @@
 		7DB041F41A4E4743002F8583 /* Cell */ = {
 			isa = PBXGroup;
 			children = (
+				7D11C8C41A5AD2C30026DB84 /* PostCartTableViewCell.h */,
+				7D11C8C51A5AD2C30026DB84 /* PostCartTableViewCell.m */,
+				7D11C8C61A5AD2C30026DB84 /* PostCartTableViewCell.xib */,
 				7DB041F51A4E475E002F8583 /* ListTableViewCell.h */,
 				7DB041F61A4E475E002F8583 /* ListTableViewCell.m */,
 				7DB041F71A4E475E002F8583 /* ListTableViewCell.xib */,
@@ -1714,6 +1742,7 @@
 				7D5024621A4BA7B3007967B8 /* guide2.jpg in Resources */,
 				7D5024901A4BA7B3007967B8 /* mm_listitem_pressed.9.png in Resources */,
 				7D5024CA1A4BA7B3007967B8 /* switch_in_hide.png in Resources */,
+				7D11C8C81A5AD2C30026DB84 /* PostCartTableViewCell.xib in Resources */,
 				7D50242F1A4BA7B3007967B8 /* android_ratingbar_single_light.png in Resources */,
 				7D5024A81A4BA7B3007967B8 /* pointer_map.png in Resources */,
 				7D5024881A4BA7B3007967B8 /* main_navigation_background.9.png in Resources */,
@@ -1902,7 +1931,7 @@
 				7D5025CF1A4BD702007967B8 /* MainYangViewController.m in Sources */,
 				7DC895A81A502263000D6B1A /* ImageModel.m in Sources */,
 				7D5025811A4BA92C007967B8 /* UIImage+MultiFormat.m in Sources */,
-				7D5023561A4BA405007967B8 /* MoreViewController.m in Sources */,
+				7D11C8B71A5AB5DA0026DB84 /* MoreViewController.m in Sources */,
 				7DB042211A4E5341002F8583 /* NSUserDefaults+RMSaveCustomObject.m in Sources */,
 				7DB042151A4E525E002F8583 /* UIView+Extension.m in Sources */,
 				7DF1319C1A4F9C3000B9B442 /* DiscoverViewController.m in Sources */,
@@ -1912,6 +1941,7 @@
 				7D5025801A4BA92C007967B8 /* UIImage+GIF.m in Sources */,
 				7D5025991A4BA92C007967B8 /* TSMessageView.m in Sources */,
 				7D5025A31A4BB020007967B8 /* VerifiCodeViewController.m in Sources */,
+				7D11C8BA1A5AB9630026DB84 /* ChangePasswordViewController.m in Sources */,
 				7D5025791A4BA92C007967B8 /* SDWebImageCompat.m in Sources */,
 				7D5023531A4BA3F8007967B8 /* PeopleViewController.m in Sources */,
 				7D5025571A4BA92C007967B8 /* AFHTTPSessionManager.m in Sources */,
@@ -1958,6 +1988,7 @@
 				7DF131A21A4FAEAB00B9B442 /* WineModel.m in Sources */,
 				7D5025771A4BA92C007967B8 /* NSData+ImageContentType.m in Sources */,
 				7DC895BA1A502C1B000D6B1A /* SongVerticalScrollView.m in Sources */,
+				7D11C8C31A5ACC2B0026DB84 /* AddAdressViewController.m in Sources */,
 				7D5025B61A4BBA6D007967B8 /* NetRequestOperation.m in Sources */,
 				7D83D4291A4ED39F00E6C0FF /* ProductListViewController.m in Sources */,
 				7DC1773B1A51417B0059D734 /* AdressTableViewCell.m in Sources */,
@@ -1967,13 +1998,16 @@
 				7D5025A01A4BAB6E007967B8 /* RegistViewController.m in Sources */,
 				7D41E98C1A5285900022441C /* ForgetPasswordViewController.m in Sources */,
 				7D5025971A4BA92C007967B8 /* TSBlurView.m in Sources */,
+				7D11C8BD1A5AC0590026DB84 /* EditInformationViewController.m in Sources */,
 				7D5025C91A4BD6CF007967B8 /* MainWhiteViewController.m in Sources */,
 				7D5025661A4BA92C007967B8 /* UIRefreshControl+AFNetworking.m in Sources */,
 				7D50255C1A4BA92C007967B8 /* AFURLResponseSerialization.m in Sources */,
 				7DC177441A5143630059D734 /* AdressModel.m in Sources */,
 				7DC177211A5101070059D734 /* JiuYouModel.m in Sources */,
+				7D11C8C71A5AD2C30026DB84 /* PostCartTableViewCell.m in Sources */,
 				7D50257F1A4BA92C007967B8 /* UIButton+WebCache.m in Sources */,
 				7D83D41D1A4EC50E00E6C0FF /* BuyCartTableViewCell.m in Sources */,
+				7D11C8C01A5AC6820026DB84 /* PostOrderViewController.m in Sources */,
 				7DC895B71A502C1B000D6B1A /* CycleScrollView.m in Sources */,
 				7DC895B81A502C1B000D6B1A /* NSTimer+Addition.m in Sources */,
 				7D50257B1A4BA92C007967B8 /* SDWebImageDownloader.m in Sources */,

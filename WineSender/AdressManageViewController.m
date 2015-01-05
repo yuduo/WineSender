@@ -12,6 +12,7 @@
 #import "AdressTableViewCell.h"
 #import "AddAdressTableViewCell.h"
 #import "AdressTableViewCell.h"
+#import "AddAdressViewController.h"
 @interface AdressManageViewController ()
 <UITableViewDataSource,UITableViewDelegate>
 @property (weak, nonatomic) IBOutlet UITableView *tableListView;
@@ -123,23 +124,8 @@
 }
 -(void)addAdressToServer
 {
-    NSMutableDictionary *dic = [[NSMutableDictionary alloc]init];
-    [dic setValue:[NSDictionary dictionaryWithObjectsAndKeys:UserDefaultEntity.zoneCode,@"zoneCode",
-                   UserDefaultEntity.uid,@"uid",
-                   nil] forKey:@"POST_DATA"];
-    [dic setValue:@"getList" forKey:@"METHOD_NAME"];
-    [dic setValue:UserDefaultEntity.session_id forKey:@"SESSION_ID"];
-    [dic setValue:@"addressCommand" forKey:@"BEAN_NAME"];
+    AddAdressViewController *verifiCodeViewController=[self.storyboard instantiateViewControllerWithIdentifier:@"AddAdressViewController"];
     
-    [self.netWorkOperation PostRequest:dic requestSuccess:^(NSString *returnObj) {
-        NSLog(@"returnObj--%@",returnObj);
-        NSDictionary *dic = (NSDictionary*)returnObj;
-        NSArray *returnArray=[NSJSONSerialization JSONObjectWithData:[[dic valueForKey:@"JSON_DATA"] dataUsingEncoding:NSUTF8StringEncoding] options:NSJSONReadingMutableLeaves error:nil];
-        
-        _listArray=[[NSMutableArray alloc]initWithArray: [RMMapper arrayOfClass:[AdressModel class] fromArrayOfDictionary:returnArray]];
-        [_tableListView reloadData];
-    } requestFailure:^(NSString *errorString) {
-        
-    }];
+    [self.navigationController pushViewController:verifiCodeViewController animated:YES];
 }
 @end

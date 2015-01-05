@@ -22,7 +22,7 @@
 -(void)updateController:(OrderListModel*)model
 {
     _cellNumber.text = model.orderNo;
-    _orderPriceLabel.text = model.goodsAmount;
+    _orderPriceLabel.text = [NSString stringWithFormat:@"%d", model.goodsAmount];
     _orderTimeLabel.text = model.createDate;
     _orderAdressLabel.text = [NSString stringWithFormat:@"%@   %@   %@",model.receiveName,model.memberMobile,model.receiveAddress];
     _orderStatusLabel.text = model.flagValue;

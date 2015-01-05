@@ -10,10 +10,12 @@
 #import "LoginViewController.h"
 #import "BuyCartTableViewCell.h"
 #import "BuyCardListModel.h"
+#import "PostOrderViewController.h"
 @interface BuyCartViewController ()<UITableViewDataSource,UITableViewDelegate>
 @property (weak, nonatomic) IBOutlet UITableView *tableListView;
 @property(nonatomic,strong)NSMutableArray *orderListArray;
 @property (weak, nonatomic) IBOutlet UILabel *totoalLabel;
+@property (strong, nonatomic) IBOutlet UIButton *deleteButton;
 @end
 
 @implementation BuyCartViewController
@@ -26,7 +28,8 @@
     _tableListView.dataSource = self;
     [_tableListView addHeaderWithTarget:self action:@selector(headerRereshing)];
     [_tableListView addFooterWithTarget:self action:@selector(footerRereshing)];
-    
+    UIBarButtonItem *rightBarItem          = [[UIBarButtonItem alloc] initWithCustomView:_deleteButton];
+    self.navigationItem.rightBarButtonItem = rightBarItem;
 
 }
 -(void)viewDidAppear:(BOOL)animated
@@ -163,6 +166,13 @@
     return cell.frame.size.height;
 }
 - (IBAction)goToPayClicked:(id)sender {
+    
+    PostOrderViewController *verifiCodeViewController=[self.storyboard instantiateViewControllerWithIdentifier:@"PostOrderViewController"];
+    verifiCodeViewController.orderListArray = [[NSMutableArray alloc]initWithArray: _orderListArray];
+    [self.navigationController pushViewController:verifiCodeViewController animated:YES];
+}
+- (IBAction)deleteButtonClicked:(id)sender {
+    
 }
 
 @end

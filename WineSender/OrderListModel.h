@@ -12,7 +12,7 @@
 @property(nonatomic,strong)NSString*  id;
 @property(nonatomic,strong)NSString* orderFlag;
 @property(nonatomic,strong)NSString* orderNo;
-@property(nonatomic,strong)NSString* goodsAmount;
+@property(nonatomic,assign)int goodsAmount;
 @property(nonatomic,strong)NSString* flagValue;
 @property(nonatomic,strong)NSString* receiveName;
 @property(nonatomic,strong)NSString* receiveAddress;

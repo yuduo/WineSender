@@ -13,6 +13,7 @@
 #import "MyJiuYouViewController.h"
 #import "CheckInViewController.h"
 #import "AdressManageViewController.h"
+#import "MoreViewController.h"
 @interface PeopleViewController ()<UITableViewDataSource,UITableViewDelegate>
 @property (weak, nonatomic) IBOutlet UITableView *tableListView;
 
@@ -165,7 +166,8 @@
     return cell.frame.size.height;
 }
 - (IBAction)moreButtonClicked:(id)sender {
-    
+    MoreViewController *verifiCodeViewController=[self.storyboard instantiateViewControllerWithIdentifier:@"MoreViewController"];
+    [self.navigationController pushViewController:verifiCodeViewController animated:YES];
 }
 
 @end
